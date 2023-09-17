@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.Random;
 
+import static java.lang.Thread.sleep;
+
 public class RockPaperScissorsGame {
     // so ppl know where the code starts, public - accessible everywhere, static - like the floor structure for the code, void - to return nothing
     public static void main(String[] args) {
@@ -23,9 +25,9 @@ public class RockPaperScissorsGame {
             System.out.println("\n -----------------------------------------------");
 
             try {
-                Thread.sleep(500);
+                sleep(500);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
 
             // the score updates
@@ -49,7 +51,7 @@ public class RockPaperScissorsGame {
             int userIntChoice = Integer.parseInt(userChoice);
 
             try {
-                Thread.sleep(2000);
+                sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -58,7 +60,7 @@ public class RockPaperScissorsGame {
             System.out.println("Player > " + getChoiceName(userIntChoice) + "\t vs. \t"+ getChoiceName(computerChoice) + "\t<Computer");
 
             try {
-                Thread.sleep(2000);
+                sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -89,7 +91,7 @@ public class RockPaperScissorsGame {
             // also for interactive game purposes, according to the internet: try and catch work "gracefully" together.
             // It is used for troubleshooting potential errors during the pause
             try {
-                Thread.sleep(1000);
+                sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
