@@ -6,21 +6,32 @@ public class stringencryption {
 
     // the main codes for the assignment
     public static void main(String[] args) {
-
         // to use the scanner
         Scanner scanner = new Scanner(System.in);
+        String input;
+
+        System.out.println("Welcome to August's personal String encryption and decryption java exercize" +
+                "\n *********************************************" +
+                "\n (Please feel to quit whenever by pressing q :))");
 
         // this loop: is for the continue statement within the inner loop so that it doesn't confuse which loop to follow
         loop:
         // the loop for the encryption (but actually, it just encrypts one thing despite the repeats)
-        while (true) {
 
+
+        while (true) {
             // interactive platform messages
             System.out.println("\n ------------------------------------- " +
                     "\n Please enter your message to be encrypted (strings only) :)");
 
             // user can input string/ strings
             String message = scanner.nextLine();
+
+            if(message.toLowerCase().equals("q")) {
+                System.out.println("\n . \n . \n....... \nYou have Exited the encryption :) \n...");
+                ;
+                break;
+            }
 
             // same logic as the one bellow (added this after the "innerloop")
 
