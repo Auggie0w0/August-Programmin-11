@@ -1,24 +1,57 @@
+// to use the scanner
 import java.util.Scanner;
 
+// the main methode for the encryption to run
 public class stringencryption {
+
+    // the main codes for the assignment
     public static void main(String[] args) {
+
+        // to use the scanner
         Scanner scanner = new Scanner(System.in);
 
+        // this loop: is for the continue statement within the inner loop so that it doesn't confuse which loop to follow
         loop:
+        // the loop for the encryption (but actually, it just encrypts one thing despite the repeats)
         while (true) {
+
+            // interactive platform messages
             System.out.println("\n ------------------------------------- " +
                     "\n Please enter your message to be encrypted (strings only) :)");
 
+            // user can input string/ strings
             String message = scanner.nextLine();
 
+            // same logic as the one bellow (added this after the "innerloop")
+
+            verify:
+            while (true) {
+                if (isString(message)) {
+                    break verify;
+                } else {
+                    System.out.println("Please enter STRINGS only, thank you.");
+                    continue loop;
+                }
+
+            }
+
+            // not only can the user verify, I can too -that the algorithm got all the strings
             System.out.println("\n ----------------------------------- \n" +
                     "Please confirm that you want to encrypt: " + message + "\n" +
                     " >> Y/N <<");
 
+            // inner loop for the yes and no or other answers
             while (true) {
+                // user can input Y/y N/n for the following if statements
                 String yesorno = scanner.next().toLowerCase();
                 scanner.nextLine();
 
+                /*
+                 if the String the user wants to encrypt is correct, it will be encrypted
+                 by pulling from the reverse input methode in the private static methode
+                 Here is also where the computer reiterate the original message and creates the encrypted message
+                 Then, the code will come to an end with break;
+                */
                 if (yesorno.equals("y")) {
                     String encryptedMessage = reverseString(message);
                     System.out.println("\n __________________________ \n" +
@@ -26,9 +59,14 @@ public class stringencryption {
                     System.out.println("........................ \n this was your original message:" +
                             "\n" + message);
                     break;
-                } else if (yesorno.equals("n")) {
+                }
+                /* if the user does not want to encrypt the message re-outputted,
+                the code will repeat from the "loop:" aka the outer-loop */
+                else if (yesorno.equals("n")) {
                     continue loop;
-                } else {
+                }
+                // any other input will be rendered false and so will continue in the inner loop
+                else {
                     System.out.println("I do not understand. Please let me know 'Y' or 'N'");
                     continue;
                 }
@@ -66,4 +104,17 @@ public class stringencryption {
         return reversed.toString();
     }
 
+    // make sure that the inputs are string and strings only + AND THAT SPACES ARE OK
+    public static boolean isString(String input) {
+//        String [] words = input.split(" +");
+//
+//        for (String word : words) {
+//            if (!word.matches("^[a-zA-Z]+$")) {
+//                return  false;
+//            }
+//        }
+
+//        return  true;
+        return input.matches("^[a-zA-Z ]+$");
+    }
 }
