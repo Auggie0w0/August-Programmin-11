@@ -83,8 +83,8 @@ public class stringencryption {
                 }
             }
 
-            scanner.close();
         }
+        scanner.close();
     }
 
     /*
