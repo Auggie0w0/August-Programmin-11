@@ -1,13 +1,27 @@
 public class main {
-    public static void main(String [] args) {
-        int[] integers = new int[5];
-        integers[2] = 10;
-        System.out.println(integers);
-        int[] arr = new int[5];
-        for(int i=0; i<arr.length; i++) {
-            arr[i] = i*2;
-            System.out.print(arr[i]);
+//    public static int mult(int a, int b) {
+//        return a * b;
+////        int[] integers = new int[5];
+////        integers[2] = 10;
+////        System.out.println(integers);
+////        int[] arr = new int[5];
+////        for(int i=0; i<arr.length; i++) {
+////            arr[i] = i*2;
+////            System.out.print(arr[i]);
+//        }
+
+        public static void main (String[] args) {
+            int nums = 0;
+            for(int i=0; i<5; i++){
+                nums --;
+                for(int j=0; j<5; j++) {
+                    nums++;
+                }
+            System.out.println(nums);
+
+//            System.out.println(mult(5,10));
         }
+    }
 
     }
 //    static double pyth(double a, double b) {
@@ -41,4 +55,3 @@ public class main {
 ////        System.out.println("Hypotenuse:" + c);
 //        System.out.println(squareRoot(76));
 //    }
-}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Add Insert Delete Arrays/Add Insert Delete Arrays.iml" filepath="$PROJECT_DIR$/Add Insert Delete Arrays/Add Insert Delete Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/August-Programmin-11.iml" filepath="$PROJECT_DIR$/August-Programmin-11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Drawing with Text/Drawing with Text.iml" filepath="$PROJECT_DIR$/Drawing with Text/Drawing with Text.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Expressions Assignment/Expressions Assignment.iml" filepath="$PROJECT_DIR$/Expressions Assignment/Expressions Assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rock Paper Scissors/Rock Paper Scissors.iml" filepath="$PROJECT_DIR$/Rock Paper Scissors/Rock Paper Scissors.iml" />
+    </modules>
+  </component>
+</project>
