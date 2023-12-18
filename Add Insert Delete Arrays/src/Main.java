@@ -67,8 +67,14 @@ public class Main {
         // to check the original
         System.out.println("\n" + anotherList);
 
-        // here, it uses the methode to add another element to a specific "index"
-        addElementAtIndex(anotherList,"sashimi",1);
+        // from the elementtoinsert in the public static void bellow, it now equates to Sashimi
+        String elementToInsert = "sashimi";
+        // and it will be entered after the first word at position 1
+        int insertionPosition = 1;
+
+
+        // here, it uses the method to add another element to a specific "index"
+        insertInMiddle(anotherList, elementToInsert, insertionPosition);
         System.out.println(anotherList);
 
     }
@@ -147,9 +153,33 @@ public class Main {
     // Increases the size of the array by 1
 // ------------------------------------------------------------------------------//
 
-    public static void addElementAtIndex(ArrayList<String> list, String element, int index) {
-        list.add(index, element);
+        public static void insertInMiddle(ArrayList<String> list, String element, int position) {
+        // this sets a parameter for the function so that the insertion of the new value for the list should remain in the list not outside
+            if (position < 0 || position > list.size()) {
+                System.out.println("Invalid position for insertion.");
+                return;
+            }
+
+        // method 1...
+//            list.add(position, element);
+
+        // method 2
+
+            // to create a new array list
+            ArrayList<String> resultList = new ArrayList<>();
+
+            // the for loop is to look through the original array that will be added
+            for (int i = 0; i<list.size(); i++) {
+                if (i == position) {
+                    resultList.add(element);
+                }
+                resultList.add(list.get(i));
+            }
+
+            list.clear ();
+            list.addAll ( resultList );
+
+        }
+
     }
 
-
-}
