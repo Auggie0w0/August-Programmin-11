@@ -123,4 +123,55 @@ public class StringTests {
             "abcdefghijklmnopqrstuvwxyz",
 
     };
+
+    // If I wanted to do it here (which I much prefer TT-TT So the scanner is not commented when I hand it in)
+    // TO TEST PROBLEM ONE ------------------
+        public static void testProblemOne() {
+            System.out.println ( "PROBLEM ONE\n" );
+
+            for (int i = 0; i < problemOne.length; i++) { // the for loop will run through every single tester in this .java for question one
+                int result = Main.problemOne(problemOne[i]); // the int's result to be compared to the result will refer back to the method of problemone in Main.java and run each of the testers here
+                boolean passed = result == problemOneExpected[i]; // by using boolean, the results, which in this case is int (as if number of vowels), can be deducted as true or false by matching the expected results or not by assigning the boolean variable as passed
+                // i+1 because i starts at 0 (to list which tester), the boolean variable true = passed, false = failed (result = condition ? valueIfTrue : valueIfFalse;)
+                System.out.println("Test Case " + (i + 1) + " : " + (passed ? "Passed" : "Failed"));
+            }
+
+            System.out.println ( "---------------------------------- \n" );
+        }
+
+    // TO TEST PROBLEM TWO ------------------
+        public static void testProblemTwo() {
+            System.out.println ( "PROBLEM TWO\n" );
+
+            // same explanations as above
+            for (int i = 0; i < problemTwo.length; i++) {
+                int result = Main.problemTwo(problemTwo[i]);
+                boolean passed = result == problemTwoExpected[i];
+                System.out.println("Test Case " + (i + 1) + " : " + (passed ? "Passed" : "Failed"));
+            }
+
+            System.out.println ( "---------------------------------- \n" );
+        }
+
+    // TO TEST PROBLEM THREE ------------------
+        public static void testProblemThree() {
+            System.out.println ( "PROBLEM THREE\n" );
+
+            // same explanation as above except the result is a String instead of int
+            // fix: the result can no longer == (as int), .equal statement have to be used in this case
+            for (int i = 0; i < problemThree.length; i++) {
+                String result = Main.problemThree(problemThree[i]);
+                boolean passed = result.equalsIgnoreCase (problemThreeExpected[i]);
+                System.out.println("Test Case " + (i + 1) + " : " + (passed ? "Passed" : "Failed"));
+            }
+
+            System.out.println ( "---------------------------------- \n" );
+        }
+
+        // TO CALL UPON THE MAIN.JAVA :)
+        public static void main(String[] args) {
+            testProblemOne();
+            testProblemTwo();
+            testProblemThree();
+        }
 }
