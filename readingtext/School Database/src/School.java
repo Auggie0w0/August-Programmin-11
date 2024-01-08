@@ -36,7 +36,7 @@ public class School {
     }
 
     // ---------------------------------------------------------------
-    /**
+    /** GETTERS AND SETTER
      * "get" allows for the private fields to be accessed in a controlled environment
      * @return to the private field (for all the public String bellow)
      *
@@ -50,7 +50,7 @@ public class School {
         return name;
     }
     public void setName(String name) {
-        this.name = name; //
+        this.name = name;
     }
     public String getYear() {
         return year;
