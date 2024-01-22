@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Withdraw {
@@ -11,8 +12,9 @@ public class Withdraw {
         this.account = account;
     }
 
+    @Override
     public String toString(){
-        //your code here
-        return "";
+        SimpleDateFormat dateFormat = new SimpleDateFormat ( "EEE MMM dd HH:mm:ss z yyyy");
+        return "Withdrawal of: $"+ amount + " Date: " + dateFormat.format(date) + " from account: " + account;
     }
 }
