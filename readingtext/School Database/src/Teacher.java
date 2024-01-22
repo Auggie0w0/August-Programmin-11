@@ -1,30 +1,29 @@
 public class Teacher {
 
     /**
-     *
+     * This class is created with the intent to create and manage teachers (and their respective information)
+     * Represents a teacher with a name and a subject.
      */
-
-    private String firstName;
-    private String lastName;
+    private String name;
     private String subject;
 
-    public Teacher(String firstName, String lastName, String subject) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    /**
+     * Constructor for creating a new Teacher object.
+     * Initializes a teacher with the provided name and subject.
+     *
+     * @param name    The name of the teacher.
+     * @param subject The subject that the teacher teaches.
+     */
+    public Teacher(String name, String subject) {
+        this.name = name;
         this.subject = subject;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
     public String getSubject() {
         return subject;
@@ -33,8 +32,15 @@ public class Teacher {
         this.subject = subject;
     }
 
-    // to string here was used to perfectly represent the function is specifically used to provide a string that represents the "object"
+
+    /**
+     * Provides a string representation of the Teacher object to be utilized in Main.java:
+     * a methode used to display the teacher's name and subject in a readable format.*
+
+     * @return A string representing the teacher, including their name and subject.
+     */
+    @Override // a method definition to indicate that the method is intended to override a method declared in a parent class.
     public String toString() {
-    return "Name: " + firstName + " " + lastName + " Subject: " + subject;
+    return "Name: " + name + " Subject: " + subject;
     }
 }

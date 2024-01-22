@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
     /* vocabulary
     private: restricts its access to the class itself in terms of modification and accessibility
-    "this." calls upun the method to differentiate between class fields and parameters
-     public String get____() --> To get something, it returns a string value, but doens't take prameters. It is to get the value of the fields, so when
+    "this." calls upon the method to differentiate between class fields and parameters
+     public String get____() --> To get something, it returns a string value, but doesn't take parameters. It is to get the value of the fields, so when
     this field is called, it will return the current value of the field
     public void set____() ---> To set something is to not return any value, its purpose is to set parameters and use it to set or modify
      */
 
 public class School {
     /**
-     * Bellow represents all the fields present:
+     * Below represents all the fields present:
      * @param teachers the array for all the teachers.
      * @param students the array for all the students
      * @param name the names of the teachers or students
@@ -36,16 +36,6 @@ public class School {
     }
 
     // ---------------------------------------------------------------
-    /** GETTERS AND SETTER
-     * "get" allows for the private fields to be accessed in a controlled environment
-     * @return to the private field (for all the public String bellow)
-     *
-     * "set" are used for, in this case the methods used to modify the contents of private fields
-     *            (accepted within the perimeters)
-     * "this." will call the fields specifically and update the values to whichever variable it is assigned to
-     *              which can be used later on while utilizing the method
-     */
-    // ---------------------------------------------------------------
     public String getName() {
         return name;
     }
@@ -66,31 +56,68 @@ public class School {
     }
 
     //--------------------- Methods --------------------------
+    /**
+     * Adds a teacher to the school.
+     * @param teacher The teacher to be added.
+     */
     public void addTeacher(Teacher teacher) {
-        teachers.add ( teacher );     // Add a teacher to list
+        teachers.add ( teacher );
     }
+    /**
+     * Adds a student to the school.
+     * @param student The student to be added.
+     */
     public void addStudent(Student student) {
-        students.add ( student ); // Add a student to list
+        students.add ( student );
     }
-    public void deleteTeacher(Teacher teacher) {
-        teachers.remove ( teacher ); // Delete a teacher from list
+
+    /**
+     * Removes a teacher from the school.
+     * @param index The teacher to be removed at the mentioned index
+     */
+    /* by indicating each of the added teacher as a position (of index) removing specific teachers
+     is made much easier this way, and for troubleshooting, the number will return invalid if it is
+     bigger than the number of teachers there are (the first teacher being 0) */
+    public void deleteTeacher(int index) {
+        if (index >= 0 & index < teachers.size ()) {
+            teachers.remove ( index);
+        } else {
+            System.out.println ( "Invalid index entered, this teacher does not exist" );
+        }
     }
-    public void deleteStudent(Student student) {
-        students.remove ( student ); // Delete a student from list
+
+    /**
+     * Removes a student from the school.
+     * @param index The student to be removed at the mentioned index
+
+     *by indicating each of the added student as a position (of index) removing specific student
+     *      is made much easier this way, and for troubleshooting, the number will return invalid if it is
+     *     bigger than the number of student there are (the first student being 0)
+
+     */
+
+    public void deleteStudent(int index) {
+        if (index >= 0 & index < students.size ()) {
+            students.remove ( index);
+        } else {
+            System.out.println ( "Invalid index entered, this student does not exist" );
+        }
     }
 
     /**
      *the "for loop" bellow will run the duration of how many teachers/ students are in the teachers/students
     array list while printing out each of the teacher/ student (adding to the array list)
+     @paraam
      */
     public void showAllTeachers() { // Show all teachers
-        for ( Teacher teacher : teachers ) {
-            System.out.println ( teacher );
+        for ( int i =0; i <teachers.size(); i++) {
+            System.out.println ( i+": " + teachers.get(i));
         }
     }
+
     public void showAllStudents() {     // Show all students
-        for ( Student student : students ) {
-            System.out.println ( student );
+       for (int i = 0; i <students.size (); i++) {
+           System.out.println ( i + ": " + students.get ( i ) );
         }
     }
 }
