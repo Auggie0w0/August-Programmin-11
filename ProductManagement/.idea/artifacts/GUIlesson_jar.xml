@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact name="GUIlesson:jar">
+    <output-path>$PROJECT_DIR$/../GUIlesson</output-path>
+    <root id="root" />
+  </artifact>
+</component>
