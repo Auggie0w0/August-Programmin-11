@@ -1,13 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gameofchance.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <children>
+      <BorderPane prefHeight="370.0" prefWidth="560.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="48.0" prefWidth="162.0" text="RANDOM DICE GAME!" textAlignment="CENTER">
+                     <font>
+                        <Font name="American Typewriter Condensed Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="93.0" text="LOSES">
+                     <font>
+                        <Font name="YuKyokasho Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="losesList" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="100.0" text="WINS" textAlignment="RIGHT">
+                     <font>
+                        <Font name="YuKyokasho Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="winList" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="572.0">
+                     <children>
+                        <Button fx:id="higherbtn" layoutX="150.0" layoutY="38.0" mnemonicParsing="false" onAction="#guessHigher" text="HIGHER" />
+                        <Button fx:id="lowerbtn" layoutX="343.0" layoutY="38.0" mnemonicParsing="false" onAction="#guessLower" text="LOWER" />
+                        <Label alignment="CENTER" layoutX="248.0" layoutY="43.0" prefHeight="17.0" prefWidth="65.0" text="GUESS">
+                           <font>
+                              <Font name="Verdana" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="startbtn" layoutX="128.0" layoutY="146.0" mnemonicParsing="false" onMouseClicked="#start" prefHeight="26.0" prefWidth="104.0" text="START">
+                           <font>
+                              <Font name="Apple SD Gothic Neo Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lblDice" layoutX="232.0" layoutY="49.0" prefHeight="17.0" prefWidth="45.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGuess" layoutX="158.0" layoutY="49.0" prefHeight="17.0" prefWidth="45.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
 
 </VBox>
