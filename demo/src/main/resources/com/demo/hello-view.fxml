@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="FRIENDS BOOK">
+               <font>
+                  <Font name="Ancient Medium" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="358.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="329.0" prefWidth="147.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="305.0" text="Friend info">
+                     <font>
+                        <Font name="AppleMyungjo Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="24.0" prefWidth="151.0" />
+                  <Label fx:id="namelbl" alignment="CENTER" prefHeight="17.0" prefWidth="305.0">
+                     <font>
+                        <Font name="Arial Hebrew Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gradelbl" alignment="CENTER" prefHeight="17.0" prefWidth="305.0">
+                     <font>
+                        <Font name="Arial Hebrew Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numberlbl" alignment="CENTER" prefHeight="17.0" prefWidth="305.0">
+                     <font>
+                        <Font name="Arial Hebrew Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="329.0" prefWidth="312.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="305.0" text="Friends list">
+                     <font>
+                        <Font name="AppleMyungjo Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="24.0" prefWidth="151.0" />
+                  <ListView fx:id="friendlist" prefHeight="283.0" prefWidth="307.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="329.0" prefWidth="155.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="305.0" text="Modify List">
+                     <font>
+                        <Font name="AppleMyungjo Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="24.0" prefWidth="151.0" />
+                  <Button fx:id="addbtn" mnemonicParsing="false" text="Add Friend" />
+                  <TextField fx:id="add_name" prefHeight="25.0" prefWidth="154.0" text="Name" />
+                  <TextField fx:id="delete_grade" prefHeight="25.0" prefWidth="154.0" text="Grade" />
+                  <TextField fx:id="add_num" prefHeight="25.0" prefWidth="154.0" text="Number" />
+                  <Pane prefHeight="46.0" prefWidth="120.0" />
+                  <Button fx:id="deletebtn" mnemonicParsing="false" text="Delete Friend" />
+                  <TextField fx:id="delete_name" prefHeight="25.0" prefWidth="154.0" text="Name" />
+                  <TextField fx:id="delete_grade" prefHeight="25.0" prefWidth="154.0" text="Grade" />
+                  <TextField fx:id="delete_num" prefHeight="25.0" prefWidth="154.0" text="Number" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

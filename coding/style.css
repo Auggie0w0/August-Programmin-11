@@ -1,0 +1,32 @@
+#diagram {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#block {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    background-color: blue;
+}
+
+#forceGravity, #forceNormal {
+    position: absolute;
+    width: 3px;
+    height: 50px;
+    background-color: red;
+}
+
+#forceGravity {
+    left: 25px;
+    bottom: 50px;
+}
+
+#forceNormal {
+    left: 25px;
+    transform: rotate(90deg);
+    bottom: 25px;
+}
