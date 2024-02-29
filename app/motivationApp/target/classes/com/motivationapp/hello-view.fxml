@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="rootVBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.motivationapp.HelloController">
+   <children>
+      <BorderPane prefHeight="418.0" prefWidth="600.0">
+         <top>
+            <TitledPane prefHeight="66.0" prefWidth="600.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <content>
+                  <Label alignment="CENTER" prefHeight="31.0" prefWidth="156.0" text="MOTIVATIONAL QUOTES" textAlignment="CENTER" />
+               </content>
+            </TitledPane>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="142.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ColorPicker fx:id="colorPicker" prefHeight="37.0" prefWidth="130.0" promptText="Choose your mood" />
+                  <Separator orientation="VERTICAL" prefHeight="81.0" prefWidth="44.0" />
+                  <Button fx:id="submitbtn" mnemonicParsing="false" onAction="#submit_color" prefHeight="35.0" prefWidth="138.0" text="Submit" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <HBox prefHeight="188.0" prefWidth="441.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="motivationbtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#get_motivation" prefHeight="190.0" prefWidth="202.0" text="Random Quote" />
+                  <Separator orientation="VERTICAL" prefHeight="210.0" prefWidth="43.0" />
+                  <Label fx:id="motivationlbl" alignment="CENTER" prefHeight="189.0" prefWidth="198.0" />
+               </children>
+            </HBox>
+         </center>
+         <left>
+            <Pane prefHeight="253.0" prefWidth="73.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="253.0" prefWidth="86.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+      <VBox alignment="CENTER" prefHeight="131.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="145.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="103.0" prefWidth="311.0">
+                     <children>
+                        <TextField fx:id="quoteTextField" prefHeight="25.0" prefWidth="447.0" promptText="quote" />
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="164.0" prefWidth="37.0" />
+                  <VBox alignment="CENTER" prefHeight="164.0" prefWidth="134.0">
+                     <children>
+                        <TextField fx:id="authorTextField" prefHeight="25.0" prefWidth="447.0" promptText="author" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#add_quote" prefHeight="31.0" prefWidth="127.0" text="Add your quote" />
+         </children>
+      </VBox>
+      <Label fx:id="statusLabel" prefHeight="23.0" prefWidth="351.0" />
+   </children>
+</VBox>
